@@ -4,9 +4,9 @@
 <header th:replace="~{cabecalho :: head('Cadastrar cliente')}"></header>
 <body>
 	<div class="container mt-3">
-		<h3 class="text-center">Cadastro de Filmes</h3>
+		<h3 class="text-center">Cadastro de Músicas</h3>
 		<hr>
-		<form th:object="${filmeDto}" action="/cadastrarFilme" method="POST">
+		<form th:object="${musicaDto}" action="/cadastrarMusica" method="POST">
 			<div class="row">
 				<div class="col-md-6">
 					<div class="input-group mb-3 input-group-sm">
@@ -18,42 +18,42 @@
 				</div>
 				<div class="col-md-6">
 					<div class="input-group mb-3 input-group-sm">
-						<span class="input-group-text">Sinopse</span> <input type="text"
-							th:field="*{sinopse}" th:errorclass="is-invalid"
+						<span class="input-group-text">Artista</span> <input type="text"
+							th:field="*{artista}" th:errorclass="is-invalid"
 							class="form-control">
-						<div class="invalid-feedback" th:errors="*{sinopse}"></div>
+						<div class="invalid-feedback" th:errors="*{artista}"></div>
 					</div>
 				</div>
 				<div class="col-md-6">
 					<div class="input-group mb-3 input-group-sm">
-						<span class="input-group-text">Data de Lançamento</span> <input
-							type="date" th:field="*{dataLancamento}"
+						<span class="input-group-text">Gênero</span> <input
+							type="text" th:field="*{genero}"
 							th:errorclass="is-invalid" class="form-control">
-						<div class="invalid-feedback" th:errors="*{dataLancamento}"></div>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="input-group mb-3 input-group-sm">
-						<span class="input-group-text">Diretor</span> <input type="text"
-							th:field="*{diretor}" th:errorclass="is-invalid"
-							class="form-control">
-						<div class="invalid-feedback" th:errors="*{diretor}"></div>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="input-group mb-3 input-group-sm">
-						<span class="input-group-text">Genero</span> <input type="text"
-							th:field="*{genero}" th:errorclass="is-invalid"
-							class="form-control">
 						<div class="invalid-feedback" th:errors="*{genero}"></div>
 					</div>
 				</div>
 				<div class="col-md-6">
 					<div class="input-group mb-3 input-group-sm">
-						<span class="input-group-text">Atores</span> <input type="text"
-							th:field="*{atores}" th:errorclass="is-invalid"
+						<span class="input-group-text">Duração</span> <input type="text"
+							th:field="*{duracao}" th:errorclass="is-invalid"
 							class="form-control">
-						<div class="invalid-feedback" th:errors="*{atores}"></div>
+						<div class="invalid-feedback" th:errors="*{duracao}"></div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="input-group mb-3 input-group-sm">
+						<span class="input-group-text">Álbum</span> <input type="text"
+							th:field="*{album}" th:errorclass="is-invalid"
+							class="form-control">
+						<div class="invalid-feedback" th:errors="*{album}"></div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="input-group mb-3 input-group-sm">
+						<span class="input-group-text">Gravadora</span> <input type="text"
+							th:field="*{gravadora}" th:errorclass="is-invalid"
+							class="form-control">
+						<div class="invalid-feedback" th:errors="*{gravadora}"></div>
 					</div>
 				</div>
 
@@ -64,8 +64,8 @@
 
 				<input class="btn btn-dark" type="submit" value="Cadastrar" />
 
-				<a class="btn btn-dark" href="filmes">Visualizar Lista de
-					Filmes</a>
+				<a class="btn btn-dark" href="musica">Visualizar Lista de
+					músicas</a>
 
 			</div>
 		</form>

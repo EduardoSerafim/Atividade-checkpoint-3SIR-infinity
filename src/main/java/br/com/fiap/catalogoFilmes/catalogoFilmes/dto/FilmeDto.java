@@ -1,40 +1,34 @@
-package br.com.fiap.catalogoFilmes.catalogoFilmes.model;
+package br.com.fiap.catalogoFilmes.catalogoFilmes.dto;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
-@Entity
-public class Filme {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+public class FilmeDto {
 	private int id;
-	
-	@Column(nullable = false)
+
+	@NotBlank
+	@NotNull
 	private String nome;
+
+	@NotBlank
+	@NotNull
 	private String sinopse;
+
+	@NotBlank
+	@NotNull
 	private String dataLancamento;
+
+	@NotBlank
+	@NotNull
 	private String diretor;
+
+	@NotBlank
+	@NotNull
 	private String genero;
+
+	@NotBlank
+	@NotNull
 	private String atores;
-
-	public Filme(int id, String nome, String sinopse, String dataLancamento, String diretor, String genero,
-			String atores) {
-		super();
-		this.id = id;
-		this.nome = nome;
-		this.sinopse = sinopse;
-		this.dataLancamento = dataLancamento;
-		this.diretor = diretor;
-		this.genero = genero;
-		this.atores = atores;
-	}
-
-	public Filme() {
-
-	}
 
 	public int getId() {
 		return id;
